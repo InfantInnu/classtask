@@ -87,14 +87,23 @@ export default function App(){
 }
 
 function Movie({name,poster,rating,summary}){
+  const styles={
+    color:rating>8? "green":"red",
+
+  };
+  const [show,setShow]=useState(true);
+  const summaryStyles={
+    display:show?"block":"none"
+  }
   return(<div className="movie-container">
     <img src={poster} alt={name} className="movie-poster"/>
     <div className="movie-cards">
       <h2 className="movie-name">{name}</h2>
       <p className="movie-rating">⭐{rating}</p>
     </div>
-    <p className="movie-summary">{summary}</p>
-    {/* <Counter/> */}
+    {/* <p className="movie-summary">{summary}</p> */}
+    <button  className="btn" onClick={()=>setShow(!show)}>Toggle Description</button>
+    <p style ={summaryStyles} className="movie-summary">{summary}</p>
   </div>
   );
 }

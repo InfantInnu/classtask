@@ -52,3 +52,14 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.btn{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 15px;
+  background-color: antiquewhite;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.btn:hover{
+  background-color: azure;
+  cursor: pointer;
+}
